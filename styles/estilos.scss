@@ -1,0 +1,17 @@
+$font-global: Roboto, Helvetica, Arial ;
+$background-general: skyblue;
+$color-primary: brown ;
+$color-secondary: green;
+
+body{
+    background-color: $background-general;
+    font-family: $font-global;
+}
+
+h1{
+    color: $color-primary;
+}
+
+p{
+    color: $color-secondary;
+}
