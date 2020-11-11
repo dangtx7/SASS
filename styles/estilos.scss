@@ -17,10 +17,6 @@ h1{
     color: $color-primary;
 }
 
-p{
-    color: $color-secondary;
-}
-
 
 // Anidaciones de codigo con Sass
 // Anidacion principal
@@ -57,7 +53,7 @@ p{
 
 // Mixins o Funciones
 // En los mixins se pueden anadir variables
-// Ademas de pasarle parametros como una funciones
+// Ademas de pasarle parametros como una funcion
 
 @mixin aleatorio($color,$radius,$shadow){
     border: 3px solid $color;
@@ -73,3 +69,34 @@ p{
     @include aleatorio(purple,15px,gray);
 }
 
+
+// Herencia
+// Para definir estilos para heredar se debe usar
+// el simbolo de %
+
+%alert{
+    color: black;   
+    background-color: gray;
+    border: 1px solid black;
+    font-size: 15px;
+    margin: 15px auto;
+    padding: 0px 15px;
+}
+
+.alert{
+    @extend %alert;
+}
+
+.alert-success{
+    @extend %alert;
+    border:2px solid green;
+    color: green;
+    background-color: white;
+}
+
+.alert-danger{
+    @extend %alert;
+    border:2px solid red;
+    color: red;
+    background-color: white;
+}
