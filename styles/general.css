@@ -1,3 +1,16 @@
+h1 {
+  text-decoration: overline;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+h3 {
+  color: black;
+  text-decoration: underline;
+}
+
 body {
   background-color: skyblue;
   font-family: Roboto, Helvetica, Arial;
@@ -11,8 +24,8 @@ p {
   color: green;
 }
 
-/* Anidaciones de codigo con Sass */
-/* Anidacion principal */
+/* Anidaciones de codigo con Sass
+   Anidacion principal */
 .caja {
   background-color: white;
   border: 1px solid black;
