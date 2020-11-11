@@ -1,5 +1,8 @@
+//Modulos 
 @use 'headers';
 
+
+// Variables
 $font-global: Roboto, Helvetica, Arial ;
 $background-general: skyblue;
 $color-primary: brown ;
@@ -19,8 +22,8 @@ p{
 }
 
 
-/* Anidaciones de codigo con Sass
-   Anidacion principal */
+// Anidaciones de codigo con Sass
+// Anidacion principal
 .caja{
 
     background-color: white;
@@ -41,7 +44,7 @@ p{
         font-size: 18px;
     }
 
-    /* Anidacion dentro de la principal */
+    // Anidacion dentro de la principal
     .info{
         color:red;
         
@@ -50,5 +53,23 @@ p{
             font-size: 16px;
         }
     }
+}
+
+// Mixins o Funciones
+// En los mixins se pueden anadir variables
+// Ademas de pasarle parametros como una funciones
+
+@mixin aleatorio($color,$radius,$shadow){
+    border: 3px solid $color;
+    border-radius: $radius;
+    box-shadow: 1px 1px 3px $shadow;
+}
+
+.lista-1{
+    @include aleatorio(green,5px,orange);
+}
+
+.lista-2{
+    @include aleatorio(purple,15px,gray);
 }
 
